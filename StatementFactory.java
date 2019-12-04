@@ -1,14 +1,15 @@
 import java.util.HashMap;
 import java.util.Map;
 import java.lang.reflect.*;
+import Statements.*;
 
 public class StatementFactory {
     private static Map<String, Stmt> statements = new HashMap<String, Stmt>();
     private static String[] stmt_classes = {
-        "DeclStmt", "LabStmt", "SubrStmt", "RetStmt", "RetrStmt", "PrintiStmt",
-        "PrintrStmt", "PrintvStmt", "JmpStmt", "JmpcStmt", "CmpeStmt", "CmpltStmt", "CmpgtStmt", "CallStmt",
-        "CallrStmt", "PushiStmt", "PushrStmt", "PushvStmt", "PopmStmt", "PopvStmt", "PeekStmt", "PokeStmt",
-        "SwpStmt", "AddStmt", "SubStmt", "MulStmt", "DivStmt"
+        "Statements.DeclStmt", "Statements.LabStmt", "Statements.SubrStmt", "Statements.RetStmt", "Statements.RetrStmt", "Statements.PrintiStmt",
+        "Statements.PrintrStmt", "Statements.PrintvStmt", "Statements.JmpStmt", "Statements.JmpcStmt", "Statements.CmpeStmt", "Statements.CmpltStmt", "Statements.CmpgtStmt", "Statements.CallStmt",
+        "Statements.CallrStmt", "Statements.PushiStmt", "Statements.PushrStmt", "Statements.PushvStmt", "Statements.PopmStmt", "Statements.PopvStmt", "Statements.PeekStmt", "Statements.PokeStmt",
+        "Statements.SwpStmt", "Statements.AddStmt", "Statements.SubStmt", "Statements.MulStmt", "Statements.DivStmt"
     };
     private static String[] stmts = {
         "decl", "lab", "subr", "ret", "retr", "printi", "printr", "printv", "jmp", "jmpc",
@@ -28,7 +29,7 @@ public class StatementFactory {
                 e.printStackTrace();
             }
             try {
-                constructor = class_name.getConstructor(Stmt.class);
+                constructor = class_name.getConstructor();
             } catch (NoSuchMethodException e) {
                 System.out.println("Error: Constructor not found for " + stmt_classes[i]);
                 e.printStackTrace();
