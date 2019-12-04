@@ -4,25 +4,23 @@ import src.parser.*;
 import src.argobj.*;
 import src.main.*;
 
-public class DeclStmt extends Stmt {
+public class RetStmt extends Stmt {
     private Parser parser;
 
-    public DeclStmt(){
-        parser = new SParser();
+    public RetStmt(){
+        parser = new NullParser();
     }
-
     public void genCode(String[] args) {
-        ArgObj arg_obj = parser.parse(args);
+        parser.parse(args);
 
-        Main.symbol_table.put(arg_obj.getString(), Integer.toString(Main.offset_counter));
-        Main.offset_counter += 1;
-
-        byte[] bytes = new byte[5];
+        byte[] bytes = new byte[7];
 
         bytes[0] = 70;
         for (int i = 1; i <= 4; i++) {
             bytes[i] = (byte)(0 >>> ((i-1) * 8));
         }
+        bytes[5] = (byte) 77;
+        bytes[6] = (byte) 48;
 
         Main.writeBytecodes(bytes);
     }

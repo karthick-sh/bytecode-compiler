@@ -7,26 +7,27 @@ import src.statement.*;
 
 public class StatementFactory {
     private static Map<String, Stmt> statements = new HashMap<String, Stmt>();
-    private static String[] stmt_classes = {
-        "src.statement.DeclStmt", "src.statement.LabStmt", "src.statement.PrintiStmt", "src.statement.PrintvStmt", 
-        "src.statement.JmpStmt", "src.statement.JmpcStmt", "src.statement.CmpeStmt", "src.statement.CmpltStmt", "src.statement.CmpgtStmt",
-        "src.statement.PushiStmt", "src.statement.PushvStmt", "src.statement.PopmStmt", "src.statement.PopvStmt", "src.statement.PeekStmt", 
-        "src.statement.PokeStmt", "src.statement.SwpStmt", "src.statement.AddStmt", "src.statement.SubStmt", "src.statement.MulStmt", 
-        "src.statement.DivStmt"
-    };
-    private static String[] stmts = {
-        "decl", "lab", "printi", "printv", "jmp", "jmpc",
-        "cmpe", "cmplt", "cmpgt", "pushi", "pushv", "popm", "popv", "peek", "poke", "swp",
-        "add", "sub", "mul", "div"
-    };
-
     // private static String[] stmt_classes = {
-    //     "src.statement.PrintiStmt"
+    //     "src.statement.DeclStmt", "src.statement.LabStmt", "src.statement.PrintiStmt", "src.statement.PrintvStmt", 
+    //     "src.statement.JmpStmt", "src.statement.JmpcStmt", "src.statement.CmpeStmt", "src.statement.CmpltStmt", "src.statement.CmpgtStmt",
+    //     "src.statement.PushiStmt", "src.statement.PopmStmt", "src.statement.PopvStmt", "src.statement.PeekStmt", 
+    //     "src.statement.PokeStmt", "src.statement.SwpStmt", "src.statement.AddStmt", "src.statement.SubStmt", "src.statement.MulStmt", 
+    //     "src.statement.DivStmt"
+    // };
+    // private static String[] stmts = {
+    //     "decl", "lab", "printi", "printv", "jmp", "jmpc",
+    //     "cmpe", "cmplt", "cmpgt", "pushi", "pushv", "popm", "popv", "peek", "poke", "swp",
+    //     "add", "sub", "mul", "div"
     // };
 
-    // private static String[] stmts = {
-    //     "printi"
-    // };
+    private static String[] stmt_classes = {
+        "src.statement.PrintiStmt", "src.statement.DeclStmt", "src.statement.PrintiStmt", "src.statement.PrintvStmt", "src.statement.PopvStmt",
+        "src.statement.PushiStmt", "src.statement.PushvStmt", "src.statement.RetStmt", "src.statement.SubrStmt"
+    };
+
+    private static String[] stmts = {
+        "printi", "decl", "printi", "printv", "popv", "pushi", "pushv", "ret", "subr"
+    };
 
     public static void initializeStatements() {
         for (int i = 0; i < stmt_classes.length; i++) {
