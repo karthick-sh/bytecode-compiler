@@ -10,7 +10,7 @@ public class SubrStmt extends Stmt {
         parser = new NullParser();
     }
     public void genCode(String[] args) {
-
+        parser.parse(args);
         byte[] bytes = new byte[17];
 
         bytes[0] = 70;

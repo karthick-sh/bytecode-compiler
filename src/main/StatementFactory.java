@@ -25,12 +25,12 @@ public class StatementFactory {
         "src.statement.PushiStmt", "src.statement.PushvStmt", "src.statement.RetStmt", "src.statement.SubrStmt", "src.statement.AddStmt",
         "src.statement.SubStmt", "src.statement.MulStmt", "src.statement.DivStmt", "src.statement.SwpStmt", "src.statement.CmpeStmt",
         "src.statement.CmpgtStmt", "src.statement.CmpltStmt", "src.statement.PopmStmt", "src.statement.JmpStmt", "src.statement.JmpcStmt",
-        "src.statement.LabStmt"
+        "src.statement.LabStmt", "src.statement.PeekStmt", "src.statement.PokeStmt"
     };
 
     private static String[] stmts = {
         "printi", "decl", "printi", "printv", "popv", "pushi", "pushv", "ret", "subr", "add", "sub", "mul", "div", "swp",
-        "cmpe", "cmpgt", "cmplt", "popm", "jmp", "jmpc", "lab"
+        "cmpe", "cmpgt", "cmplt", "popm", "jmp", "jmpc", "lab", "peek", "poke"
     };
 
     public static void initializeStatements() {
