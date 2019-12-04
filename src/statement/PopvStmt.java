@@ -15,7 +15,7 @@ public class PopvStmt extends Stmt {
 
         int address = Integer.parseInt(Main.symbol_table.get(arg_obj.getString()));
         byte[] bytes = new byte[6];
-        
+
         bytes[0] = 70;
         for (int i = 1; i <= 4; i++) {
             bytes[i] = (byte) (address >>> ((i-1) * 8));
@@ -23,5 +23,9 @@ public class PopvStmt extends Stmt {
         bytes[5] = (byte) 80;
 
         Main.writeBytecodes(bytes);
+    }
+
+    public int getCount(){
+        return 6;
     }
 }

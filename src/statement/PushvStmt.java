@@ -24,4 +24,8 @@ public class PushvStmt extends Stmt {
 
         Main.writeBytecodes(bytes);
     }
+
+    public int getCount(){
+        return 6;
+    }
 }

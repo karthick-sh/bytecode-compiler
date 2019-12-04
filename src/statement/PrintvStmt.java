@@ -25,4 +25,9 @@ public class PrintvStmt extends Stmt {
 
         Main.writeBytecodes(bytes);
     }
+    
+
+    public int getCount(){
+        return 7;
+    }
 }

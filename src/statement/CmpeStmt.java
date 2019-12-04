@@ -19,4 +19,8 @@ public class CmpeStmt extends Stmt {
 
         Main.writeBytecodes(bytes);
     }
+
+    public int getCount(){
+        return 1;
+    }
 }

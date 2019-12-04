@@ -21,4 +21,8 @@ public class PushiStmt extends Stmt {
         }
         Main.writeBytecodes(bytes);
     }
+
+    public int getCount(){
+        return 5;
+    }
 }

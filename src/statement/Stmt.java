@@ -9,4 +9,7 @@ public class Stmt {
     public void genCode(String[] args) {
         parser.parse(args);
     }
+    public int getCount(){
+        return 0;
+    }
 }

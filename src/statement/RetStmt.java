@@ -24,4 +24,8 @@ public class RetStmt extends Stmt {
 
         Main.writeBytecodes(bytes);
     }
+
+    public int getCount(){
+        return 7;
+    }
 }

@@ -19,4 +19,8 @@ public class SwpStmt extends Stmt {
 
         Main.writeBytecodes(bytes);
     }
+
+    public int getCount(){
+        return 1;
+    }
 }

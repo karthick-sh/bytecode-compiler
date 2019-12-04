@@ -19,4 +19,8 @@ public class SubStmt extends Stmt {
 
         Main.writeBytecodes(bytes);
     }
+
+    public int getCount(){
+        return 1;
+    }
 }
