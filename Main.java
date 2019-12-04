@@ -9,6 +9,8 @@ public class Main {
 
         String input_file = args[0];
 
+        StatementFactory.initializeStatements();
+
         // The following lines are adapted from Professor Midkiff's Notes
         // available at https://engineering.purdue.edu/~smidkiff/ece30862/slides/CompilerHintsB.pdf
         BufferedReader file_reader = null;
@@ -20,7 +22,7 @@ public class Main {
                 line = file_reader.readLine();
             }
         } catch (Exception e) {
-
+            e.printStackTrace();
         } 
     }
 
@@ -36,9 +38,9 @@ public class Main {
         //Grab opcode
         if (token != null) {
             if (token.matches("decl|lab|subr|ret|retr|printi|printr|printv|jmp|jmpc|cmpe|cmplt|cmpgt|call|callr|pushi|pushr|pushv|popm|popv|peek|poke|swp|add|sub|mul|div")) {
-                // Stmt stmt = StatementFactory.getStatement(token);
+                Stmt stmt = StatementFactory.getStatement(token);
                 // stmt.genCode(tokens);
-                // System.out.println(token);
+                System.out.println(token);
             } 
             else {
                 System.out.println("Unknown stmt: "+token);

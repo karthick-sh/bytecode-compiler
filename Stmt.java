@@ -2,9 +2,7 @@ public class Stmt {
     private Parser parser;
     private String[] args;
 
-    public class Stmt() {}
-
-    public void genCode(args) {
+    public void genCode(String[] args) {
         //something happens here
     }
 }
