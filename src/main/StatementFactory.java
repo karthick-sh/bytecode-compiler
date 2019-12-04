@@ -22,11 +22,12 @@ public class StatementFactory {
 
     private static String[] stmt_classes = {
         "src.statement.PrintiStmt", "src.statement.DeclStmt", "src.statement.PrintiStmt", "src.statement.PrintvStmt", "src.statement.PopvStmt",
-        "src.statement.PushiStmt", "src.statement.PushvStmt", "src.statement.RetStmt", "src.statement.SubrStmt"
+        "src.statement.PushiStmt", "src.statement.PushvStmt", "src.statement.RetStmt", "src.statement.SubrStmt", "src.statement.AddStmt",
+        "src.statement.SubStmt", "src.statement.MulStmt", "src.statement.DivStmt", "src.statement.SwpStmt"
     };
 
     private static String[] stmts = {
-        "printi", "decl", "printi", "printv", "popv", "pushi", "pushv", "ret", "subr"
+        "printi", "decl", "printi", "printv", "popv", "pushi", "pushv", "ret", "subr", "add", "sub", "mul", "div", "swp"
     };
 
     public static void initializeStatements() {
