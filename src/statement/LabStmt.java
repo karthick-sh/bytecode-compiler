@@ -14,7 +14,6 @@ public class LabStmt extends Stmt {
         ArgObj arg_obj = parser.parse(args);
 
         Main.symbol_table.put(arg_obj.getString(), Integer.toString(Main.bytecode_offset_counter));
-        System.out.println(Main.bytecode_offset_counter);
     }
 
     public int getCount(){
