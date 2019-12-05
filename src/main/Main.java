@@ -95,9 +95,6 @@ public class Main {
                 Stmt stmt = StatementFactory.getStatement(token);
                 stmt.genCode(tokens);
             }
-            else if(!token.matches("//|/|retr|call|callr|lab|")){
-                System.out.println("Unknown stmt: "+token);
-            }
         }
     }
 
@@ -115,10 +112,6 @@ public class Main {
             if (token.matches("subr|ret|decl|printi|printv|jmp|jmpc|cmpe|cmplt|cmpgt|pushi|pushv|popm|popv|peek|poke|swp|add|sub|mul|div")) {
                 Stmt stmt = StatementFactory.getStatement(token);
                 stmt.genCode(tokens);
-                // System.out.println(token);
-            } 
-            else if(!token.matches("//|/|retr|call|callr|lab|")){
-                System.out.println("Unknown stmt: "+token);
             }
         }
     }
